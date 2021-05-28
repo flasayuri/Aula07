@@ -29,20 +29,23 @@ public class Calculadora {
 				break;
 			case 2:
 				System.out.println("\n\nRealizando a soma entre " + valor1 + " e " + valor2);
-				imprimirResultado( valor1 + valor2 );
+				double resultadoSoma = somar(valor1, valor2);
+				imprimirResultado( resultadoSoma );
 				break;
 			case 3:
 				System.out.println("\n\nRealizando a subtração entre " + valor1 + " e " + valor2);
-				imprimirResultado( valor1 - valor2 );
+				double resultadoSub = subtrair(valor1, valor2);
+				imprimirResultado( resultadoSub );
 				break;
 			case 4:
 				System.out.println("\n\nRealizando a divisão entre " + valor1 + " e " + valor2);
-				double result = dividir(valor1, valor2);
-				imprimirResultado( result );
+				double resultDiv = dividir(valor1, valor2);
+				imprimirResultado( resultDiv );
 				break;
 			case 5:
 				System.out.println("\n\nRealizando a multiplicação entre " + valor1 + " e " + valor2);
-				imprimirResultado( valor1 * valor2);
+				double resultMult = multiplicar(valor1, valor2);
+				imprimirResultado( resultMult );
 				break;
 			case 6:
 				System.out.println("Saindo do sistema");
@@ -54,6 +57,18 @@ public class Calculadora {
 
 	}
 
+	
+	public static double somar(double valor1, double valor2 ) {
+		return valor1 + valor2;
+	}
+	
+	public static double subtrair(double valor1, double valor2 ) {
+		return valor1 - valor2;
+	}
+	
+	public static double multiplicar(double valor1, double valor2 ) {
+		return valor1 * valor2;
+	}
 
 	public static double dividir(double denominador, double divisor) {
 		if ( divisor == 0 ) {
